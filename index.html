@@ -34,6 +34,7 @@
           
         
     
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
     <!-- title -->
     <title>Interception</title>
     <!-- styles -->
@@ -45,6 +46,8 @@
     <!-- rss -->
     
     
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
+    <script type="text/javascript" src="/js/music.js"></script>
 </head>
 
 <body class="max-width mx-auto px3 ltr">
@@ -79,7 +82,9 @@
 </header>
 
         
-        <section id="about">
+        
+
+<section id="about">
   
     <p>You’re waiting for a train,a train that will take you far away,you know where you hope it will take you,but you don’t know for sure, but doesn’t matter,beacause we’ll be together</p>
 
@@ -107,31 +112,7 @@
         
       
     </p>
-    {% aplayerlist %}
-    {
-        "narrow": false,                          // （可选）播放器袖珍风格
-        "autoplay": true,                         // （可选) 自动播放，移动端浏览器暂时不支持此功能
-        "mode": "random",                         // （可选）曲目循环类型，有 'random'（随机播放）, 'single' (单曲播放), 'circulation' (循环播放), 'order' (列表播放)， 默认：'circulation'                              
-        "mutex": true,                            // （可选）该选项开启时，如果同页面有其他 aplayer 播放，该播放器会暂停
-        "theme": "#e6d0b2",	                      // （可选）播放器风格色彩设置，默认：#b7daff
-        "preload": "metadata",                    // （可选）音乐文件预载入模式，可选项： 'none' 'metadata' 'auto', 默认: 'auto'
-        "listmaxheight": "513px",                 // (可选) 该播放列表的最大长度
-        "music": [
-            {
-                "title": "freedom",
-                "author": "Anthony Hamilton/Elayna Boynton",
-                "url": "https://tencii.com/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/%E7%A6%85%E9%81%93%E7%A4%BE%E5%8C%BA%E7%89%88git%E9%9B%86%E6%88%90/freedom.mp3",
-                "pic": "https://tencii.com/images/freedom.jpg"               
-            },
-            {
-                "title": "月半小夜曲",
-                "author": "李克勤",
-                "url": "https://tencii.com/项目管理/禅道社区版git集成/月半小夜曲.mp3",
-                "pic": "https://tencii.com/images/likeqin.jpg"
-            }
-        ]
-    }
-    {% endaplayerlist %}
+    <div id="aplayer"></div>
   
 </section>
 
@@ -190,6 +171,8 @@
       </ul>
     </nav>
   </div>
+  
+
 </footer>
 
 </body>
